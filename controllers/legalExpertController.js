@@ -24,7 +24,7 @@ exports.submitForm = async (req, res) => {
 
         const mailOptions = {
             from: 'workingajay7@gmail.com',
-            to: 'ajaymedidhi858@gmail.com',
+            to: "info@ntadvocates.in",
             subject: 'Thank you for contacting our legal expert',
             text: 'We have received your information and will get back to you soon.'
         };

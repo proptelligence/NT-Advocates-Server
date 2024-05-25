@@ -17,7 +17,7 @@ exports.createAppointment = async (req, res) => {
 
         const mailOptions = {
             from: 'workingajay7@gmail.com',
-            to: 'ajaymedidhi858@gmail.com',
+            to: 'info@ntadvocates.in',
             subject: 'New Appointment',
             text: `Username: ${username}\nEmail: ${email}\nPhone: ${phone}\nScheduled Date: ${scheduledDate}\nScheduled Time: ${scheduledTime}`,
         };
