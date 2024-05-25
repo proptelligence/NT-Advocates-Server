@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 // Configure CORS
-const allowedOrigins = ['http://localhost:3000', 'https://www.ntadvocates.in/',"https://server-101.onrender.com"];
+const allowedOrigins = ['http://localhost:3000', 'https://www.ntadvocates.in/',"https://nt-advocates-server.onrender.com" ];
 app.use(cors({
   origin: function (origin, callback) {
     // Check if the origin is in the allowedOrigins array or if it is undefined (for server-to-server communication)
