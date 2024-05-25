@@ -5,6 +5,7 @@ require('dotenv').config();
 const contactRoutes = require('./routes/contactRoutes');
 const appointmentRoutes = require('./routes/appointmentRoutes');
 const legalExpertRoutes = require('./routes/legalExpertRoutes');
+const subscribeRoutes = require('./routes/subscribeRoutes');
 
 const app = express();
 
@@ -30,6 +31,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 app.use('/contact', contactRoutes);
 app.use(appointmentRoutes);
 app.use('/legal-expert', legalExpertRoutes);
+app.use(subscribeRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
