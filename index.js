@@ -30,7 +30,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 app.use('/contact', contactRoutes);
 app.use(appointmentRoutes);
-app.use('/legal-expert', legalExpertRoutes);
+app.use(legalExpertRoutes);
 app.use(subscribeRoutes);
 
 const PORT = process.env.PORT || 3000;
