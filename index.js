@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors'); // Import cors module
+const cors = require('cors');
 require('dotenv').config();
 const contactRoutes = require('./routes/contactRoutes');
 const appointmentRoutes = require('./routes/appointmentRoutes');
@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 // Configure CORS
-const allowedOrigins = ['http://localhost:3000', 'https://www.ntadvocates.in',"https://nt-advocates-server.onrender.com" ];
+const allowedOrigins = ['http://localhost:3000', 'https://www.ntadvocates.in', "https://nt-advocates-server.onrender.com"];
 app.use(cors({
   origin: function (origin, callback) {
     // Check if the origin is in the allowedOrigins array or if it is undefined (for server-to-server communication)
@@ -23,6 +23,9 @@ app.use(cors({
     }
   }
 }));
+
+// Middleware to handle preflight requests for CORS
+app.options('*', cors());
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
