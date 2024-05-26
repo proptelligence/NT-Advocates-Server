@@ -21,13 +21,13 @@ exports.subscribe = async (req, res) => {
       from: 'workingajay7@gmail.com',
       to: email,
       subject: 'Thank you for subscribing to ntadvocates',
-      text: 'Thank you for subscribing to ntadvocates!',
+      text: 'Thank you for subscribing to ntadvocates! Address: #558,1st Floor, Doddanekundi Main Road Off Outer Ring Road, Bengaluru-560037 Karnataka. Call us : +91-9113853699',
     });
 
     // Send notification email to info@gmail.com
     await transporter.sendMail({
       from: 'workingajay7@gmail.com',
-      to: 'ajaymedidhi858@gmail.com',
+      to: 'info@ntadvocates.in',
       subject: 'New subscriber',
       text: `A new subscriber with email ${email} has subscribed to ntadvocates.`,
     });
